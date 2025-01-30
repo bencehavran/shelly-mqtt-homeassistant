@@ -7,11 +7,11 @@ Reducing Shelly Scan Interval from 5 to 1 Second and Forwarding to Home Assistan
 
 Used devices:
 
-Shelly Pro3EM
-Home Assistant
-MQTT Home Assistant Integration
-Mosquitto Broker Home Assistant Add-on
-MQTT Explorer Home Assistant Add-on
+#Shelly Pro3EM,  
+#Home Assistant,  
+#MQTT Home Assistant Integration,  
+#Mosquitto Broker Home Assistant Add-on,  
+#MQTT Explorer Home Assistant Add-on,  
 
 To make this work, you need to create a script on the Shelly device that updates the data every second and sends it to Home Assistant via MQTT. Special thanks to the JavaScript author turrican944 (Home Assistant Community).
 
