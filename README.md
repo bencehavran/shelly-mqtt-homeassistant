@@ -67,5 +67,16 @@ mqtt:
 Replace YOUR-ID: In the state_topic, replace YOUR-ID with the actual Shelly device ID. You can find this using MQTT Explorer.
 Unit of Measurement: The unit is set to Wh (Watt-hour), but you can change it to W (Watt) if you’re measuring instantaneous power.
 Force Update: Enabling force_update: true ensures that Home Assistant updates the sensor state even if the value hasn’t changed.
-     
-**The new sensor will require a Home Assistant restart to appear. Before restarting, verify it under Developer Tools.**
+
+
+**Verifying and Restarting Home Assistant**  
+After updating the configuration.yaml, the new sensor won’t appear immediately. You will need to restart Home Assistant for the new sensor to take effect.
+
+Before restarting, you can verify that the sensor is recognized by checking the Developer Tools in Home Assistant. If everything looks good, restart Home Assistant to finalize the integration.
+
+**Troubleshooting**  
+If you’re experiencing issues with the sensor not appearing or updating, here are some common steps to troubleshoot:  
+
+**Check MQTT Connection:** Ensure that Home Assistant is properly connected to your MQTT broker and that the Shelly device is successfully publishing to the correct topic.  
+**Verify Topic**: Use MQTT Explorer to check that the Shelly device is sending data to the expected topic. The topic should match the one you’ve entered in configuration.yaml.  
+**Restart Home Assistant**: If the new sensor isn’t showing up, try restarting Home Assistant and check the logs for any MQTT-related errors.  
